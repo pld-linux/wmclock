@@ -4,7 +4,7 @@ Summary(pt_BR):	Relógio para o "dock" do Window Maker
 Summary(es):	Reloj para el "dock" de Winow Maker
 Name:		wmclock
 Version:	1.0.12.2
-Release:	6
+Release:	7
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.jmknoble.net/WindowMaker/wmclock/%{name}-%{version}.tar.gz
@@ -15,7 +15,6 @@ Icon:		wmclock.gif
 URL:		http://www.jmknoble.net/WindowMaker/wmclock/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Wmclock is an applet which displays the date and time in a dockable
