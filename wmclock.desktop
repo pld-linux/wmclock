@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=wmclock
+Name=wmClock
 Comment=ASClock for WindowMaker
 Comment[pl]=ASClock dla WindowMakera
 Exec=wmclock -shape
