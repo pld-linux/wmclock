@@ -54,7 +54,7 @@ gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/wmclock.1x \
 %files
 %defattr(644,root,root,755)
 %doc README.gz
-%{_bindir}/wmclock
+%attr(755,root,root) %{_bindir}/wmclock
 %{_mandir}/man1/wmclock.1x.gz
 
 /etc/X11/applnk/DockApplets/wmclock.desktop
