@@ -7,7 +7,7 @@ Source0: http://www.windowmaker.org/ftp/pub/contrib/srcs/apps/asclock.tgz
 Group: X11/Utilities
 Icon: AStep.gif
 Summary: The AfterStep Clock for Window Maker
-BuildRoot: /var/tmp/%{name}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 This is a Window Maker enhanced asclock (i.e. a patch to allow asclock to be
