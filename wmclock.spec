@@ -1,57 +1,66 @@
-Name: wmclock
-Version: 1.0
-Release: 1
-Copyright: Freeware
-URL: http://afterstep.edoc.com/
-Source0: http://www.windowmaker.org/ftp/pub/contrib/srcs/apps/asclock.tgz
-Group: X11/Utilities
-Icon: AStep.gif
-Summary: The AfterStep Clock for Window Maker
+Summary:        The AfterStep Clock for Window Maker
+Summary(pl):	Zegarek przeniesiony z AfterStep do WindowMakera
+Name: 		wmclock
+Version: 	1.0
+Release: 	2
+Copyright: 	Freeware
+Group:          X11/Window Managers/Tools
+Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
+Source0: 	http://www.windowmaker.org/ftp/pub/contrib/srcs/apps/asclock.tgz
+Source1:	wmclock.desktop
+Icon:           wmclock.gif
+URL:            http://afterstep.edoc.com/
+BuildPrereq:	XFree86-devel
+BuildPrereq:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
+
+%define _prefix /usr/X11R6
+%define _mandir %{_prefix}/man
 
 %description
 This is a Window Maker enhanced asclock (i.e. a patch to allow asclock to be
 docked on Window Maker has been included). In this package, asclock was
 renamed to wmclock to avoid clashes with an AfterStep installation on the
 system.
-Asclock is a clock written to emulate the date/time application on the
-NeXTStep OS. It supports multiple languages, military and AM/PM time,
-program execution, shape extension, and multiple color depths.
-This version is compiled with English language support and 2bit display
-(four colours).
 
-%changelog
-* Mon Feb 1 1999 Thomas Ribbrock <emgaron@gmx.net> wmclock 1.0-1
-- renamed to wmclock to avoid clashes with AfterStep
-- using the Window Maker as source for the tar ball now, as their tar ball
-  already includes the necessary patch.
-
-* Sat Feb 7 1998 Cesar Cardoso <ccardoso@cesarcardoso.dyn.ml.org> 1.0-2
-- A patch for asclock be dockable on WindowMaker
-
-* Sun Jun 8 1997 Xi <ximenes@null.net> 1.0-1
-- Initial RPM
+%description -l pl
+wmclock to asclock z dodan± mo¿liwo¶ci± u¿ywania go w WindowMakerze.
 
 %prep
-%setup -n asclock
-rm -f weekday.xpm asclock month.xpm asclock.o
-ln -s english/month.xpm month.xpm
-ln -s english/weekday.xpm weekday.xpm
-rm -f clk.xpm
-ln -s xpm/clk2.xpm clk.xpm
-xmkmf
+%setup -q -n asclock
 
 %build
-make
-strip asclock
+rm -f asclock.o asclock clk.xpm weekday.xpm month.xpm
+ln -s xpm/color.xpm clk.xpm
+ln -s english/month.xpm month.xpm 
+ln -s english/weekday.xpm weekday.xpm
+
+xmkmf -a
+make CFLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include" \
+	CXXFLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install install.man DESTDIR=$RPM_BUILD_ROOT
-mv $RPM_BUILD_ROOT/usr/X11R6/bin/asclock $RPM_BUILD_ROOT/usr/X11R6/bin/wmclock
-mv $RPM_BUILD_ROOT/usr/X11R6/man/man1/asclock.1x $RPM_BUILD_ROOT/usr/X11R6/man/man1/wmclock.1x
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
+	$RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
+
+install -s asclock $RPM_BUILD_ROOT%{_bindir}/wmclock
+install asclock.man $RPM_BUILD_ROOT%{_mandir}/man1/wmclock.1x
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
+
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/wmclock.1x \
+	README
 
 %files
-%doc README INSTALL
-/usr/X11R6/bin/wmclock
-/usr/X11R6/man/man1/wmclock.1x
+%defattr(644,root,root,755)
+%doc README.gz
+%{_bindir}/wmclock
+%{_mandir}/man1/wmclock.1x.gz
+
+/etc/X11/applnk/DockApplets/wmclock.desktop
+
+%changelog
+* Sun Jul 11 1999 Piotr Czerwiñski <pius@pld.org.pl> 
+  [1.0-2]
+- spec rewritten for PLD use,
+- based on spec file by Thomas Ribbrock <emgaron@gmx.net>.
