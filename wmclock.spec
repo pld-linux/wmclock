@@ -16,6 +16,7 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define 	_prefix 	/usr/X11R6
 %define 	_mandir 	%{_prefix}/man
+%define		_applnkdir	%{_datadir}/applnk
 
 %description
 This is a Window Maker enhanced asclock (i.e. a patch to allow asclock to be
@@ -42,11 +43,11 @@ make CFLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include" \
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
-	$RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
+	$RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 install -s asclock $RPM_BUILD_ROOT%{_bindir}/wmclock
 install asclock.man $RPM_BUILD_ROOT%{_mandir}/man1/wmclock.1x
-install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/wmclock.1x \
 	README
@@ -60,4 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/wmclock
 %{_mandir}/man1/wmclock.1x.gz
 
-/usr/X11R6/share/applnk/DockApplets/wmclock.desktop
+%{_applnkdir}/DockApplets/wmclock.desktop
