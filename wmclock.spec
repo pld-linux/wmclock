@@ -68,10 +68,11 @@ xmkmf -a
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_applnkdir}/DockApplets \
+	$RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name},%{_mandir}/man1} \
 	$RPM_BUILD_ROOT%{_pixmapsdir}/{br,cs,da,de,es,fr,hu,id,it,nl,no,pl,pt,ru,sl,sv,uk}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
-%{__make} install.man DESTDIR=$RPM_BUILD_ROOT
+install %{name} $RPM_BUILD_ROOT%{_bindir}
+install %{name}.man $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1x
 
 #install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
