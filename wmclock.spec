@@ -4,7 +4,7 @@ Summary(pt_BR):	Relógio para o "dock" do Window Maker
 Summary(es):	Reloj para el "dock" de Winow Maker
 Name:		wmclock
 Version:	1.0.12.2
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.ntrnet.net/~jmknoble/WindowMaker/wmclock/%{name}-%{version}.tar.gz
@@ -69,7 +69,7 @@ xmkmf -a
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_applnkdir}/DockApplets \
-	$RPM_BUILD_ROOT%{_pixmapsdir}/{br,cz,da,de,es,fr,hu,id,it,nl,no,pl,pt,ru,si,sv,uk}
+	$RPM_BUILD_ROOT%{_pixmapsdir}/{br,cs,da,de,es,fr,hu,id,it,nl,no,pl,pt,ru,sl,sv,uk}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 %{__make} install.man DESTDIR=$RPM_BUILD_ROOT
@@ -77,7 +77,7 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/DockApplets \
 #install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 install lang.breton/*		$RPM_BUILD_ROOT%{_pixmapsdir}/br
-install lang.czech/*		$RPM_BUILD_ROOT%{_pixmapsdir}/cz
+install lang.czech/*		$RPM_BUILD_ROOT%{_pixmapsdir}/cs
 install lang.danish/*		$RPM_BUILD_ROOT%{_pixmapsdir}/da
 install lang.german/*		$RPM_BUILD_ROOT%{_pixmapsdir}/de
 install lang.spanish/*		$RPM_BUILD_ROOT%{_pixmapsdir}/es
@@ -91,7 +91,7 @@ install lang.norwegian/*	$RPM_BUILD_ROOT%{_pixmapsdir}/no
 install lang.polish/*		$RPM_BUILD_ROOT%{_pixmapsdir}/pl
 install lang.portuguese/*	$RPM_BUILD_ROOT%{_pixmapsdir}/pt
 install lang.russian/*		$RPM_BUILD_ROOT%{_pixmapsdir}/ru
-install lang.slovene/*		$RPM_BUILD_ROOT%{_pixmapsdir}/si
+install lang.slovene/*		$RPM_BUILD_ROOT%{_pixmapsdir}/sl
 install lang.swedish/*		$RPM_BUILD_ROOT%{_pixmapsdir}/sv
 install lang.ukrainian/*	$RPM_BUILD_ROOT%{_pixmapsdir}/uk
 
@@ -108,7 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 
 #%{_applnkdir}/DockApplets/wmclock.desktop
 %lang(br) %{_pixmapsdir}/br
-%lang(cz) %{_pixmapsdir}/cz
+%lang(cs) %{_pixmapsdir}/cs
 %lang(da) %{_pixmapsdir}/da
 %lang(de) %{_pixmapsdir}/de
 %lang(es) %{_pixmapsdir}/es
@@ -121,6 +121,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pl) %{_pixmapsdir}/pl
 %lang(pt) %{_pixmapsdir}/pt
 %lang(ru) %{_pixmapsdir}/ru
-%lang(si) %{_pixmapsdir}/si
+%lang(sl) %{_pixmapsdir}/sl
 %lang(sv) %{_pixmapsdir}/sv
 %lang(uk) %{_pixmapsdir}/uk
