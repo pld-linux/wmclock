@@ -3,14 +3,14 @@ Summary(pl):	Zegarek przeniesiony z AfterStep do WindowMakera
 Name:		wmclock
 Version:	1.0
 Release:	2
-Copyright:	Freeware
+License:	Freeware
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source0:	http://www.windowmaker.org/ftp/pub/contrib/srcs/apps/asclock.tgz
+Source0:	http://www.ntrnet.net/~jmknoble/WindowMaker/wmclock/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Icon:		wmclock.gif
-URL:		http://afterstep.edoc.com/
+URL:		http://www.pobox.com/~jmknoble/WindowMaker/wmclock/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/wmclock
 %{_mandir}/man1/wmclock.1x*
 
