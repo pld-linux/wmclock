@@ -102,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/wmclock
 %{_mandir}/man1/wmclock.1x*
 
-#%{_applnkdir}/DockApplets/wmclock.desktop
+#%%{_applnkdir}/DockApplets/wmclock.desktop
 %lang(br) %{_pixmapsdir}/br
 %lang(cs) %{_pixmapsdir}/cs
 %lang(da) %{_pixmapsdir}/da
