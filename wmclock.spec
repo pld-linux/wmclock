@@ -51,6 +51,9 @@ install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/wmclock.1x \
 	README
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %defattr(644,root,root,755)
 %doc README.gz
