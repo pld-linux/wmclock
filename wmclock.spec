@@ -74,7 +74,7 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/DockApplets \
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 install %{name}.man $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1x
 
-#install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 install lang.breton/*		$RPM_BUILD_ROOT%{_pixmapsdir}/br
 install lang.czech/*		$RPM_BUILD_ROOT%{_pixmapsdir}/cs
@@ -104,7 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/wmclock
 %{_mandir}/man1/wmclock.1x*
 
-#%%{_applnkdir}/DockApplets/wmclock.desktop
+%{_applnkdir}/DockApplets/wmclock.desktop
 %lang(br) %{_pixmapsdir}/br
 %lang(cs) %{_pixmapsdir}/cs
 %lang(da) %{_pixmapsdir}/da
