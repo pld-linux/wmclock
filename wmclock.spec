@@ -1,9 +1,9 @@
 Summary:	The AfterStep Clock for Window Maker
 Summary(pl):	Zegarek przeniesiony z AfterStep do WindowMakera
 Name:		wmclock
-Version:	1.0
-Release:	2
-License:	Freeware
+Version:	1.0.12.2
+Release:	1
+License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -27,25 +27,25 @@ installation on the system.
 wmclock to asclock z dodan± mo¿liwo¶ci± u¿ywania go w WindowMakerze.
 
 %prep
-%setup -q -n asclock
+%setup -q
 
 %build
-rm -f asclock.o asclock clk.xpm weekday.xpm month.xpm
-ln -sf xpm/color.xpm clk.xpm
-ln -sf english/month.xpm month.xpm 
-ln -sf english/weekday.xpm weekday.xpm
+#rm -f asclock.o asclock clk.xpm weekday.xpm month.xpm
+./configure --lang english
+#ln -sf xpm/color.xpm clk.xpm
+#ln -sf lang.english/month.xpm month.xpm 
+#ln -sf lang.english/weekday.xpm weekday.xpm
 
 xmkmf -a
-%{__make} CFLAGS="%{rpmcflags} -I%{_includedir}" \
-	CXXFLAGS="%{rpmcflags} -I%{_includedir}"
+%{__make} CCOPTIONS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
-	$RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+install -d $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
-install asclock $RPM_BUILD_ROOT%{_bindir}/wmclock
-install asclock.man $RPM_BUILD_ROOT%{_mandir}/man1/wmclock.1x
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install.man DESTDIR=$RPM_BUILD_ROOT
+
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 gzip -9nf README
