@@ -36,7 +36,7 @@ ln -s english/month.xpm month.xpm
 ln -s english/weekday.xpm weekday.xpm
 
 xmkmf -a
-make CFLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include" \
+%{__make} CFLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include" \
 	CXXFLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include"
 
 %install
