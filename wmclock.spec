@@ -95,14 +95,12 @@ install lang.slovene/*		$RPM_BUILD_ROOT%{_pixmapsdir}/sl
 install lang.swedish/*		$RPM_BUILD_ROOT%{_pixmapsdir}/sv
 install lang.ukrainian/*	$RPM_BUILD_ROOT%{_pixmapsdir}/uk
 
-gzip -9nf README COPYING
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README
 %attr(755,root,root) %{_bindir}/wmclock
 %{_mandir}/man1/wmclock.1x*
 
