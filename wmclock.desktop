@@ -6,3 +6,4 @@ Comment[pl]=ASClock dla WindowMakera
 Exec=wmclock -shape
 Terminal=false
 Type=Application
+# vi: encoding=utf-8
