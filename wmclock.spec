@@ -15,8 +15,6 @@ URL:		http://www.pobox.com/~jmknoble/WindowMaker/wmclock/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_prefix 	/usr/X11R6
-%define 	_mandir 	%{_prefix}/man
 
 %description
 Wmclock is an applet which displays the date and time in a dockable
