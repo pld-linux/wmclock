@@ -6,4 +6,6 @@ Comment[pl]=ASClock dla WindowMakera
 Exec=wmclock -shape
 Terminal=false
 Type=Application
+NotShowIn=GNOME;KDE;
+Categories=Applet;
 # vi: encoding=utf-8
