@@ -14,8 +14,8 @@ BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
-%define _prefix /usr/X11R6
-%define _mandir %{_prefix}/man
+%define 	_prefix 	/usr/X11R6
+%define 	_mandir 	%{_prefix}/man
 
 %description
 This is a Window Maker enhanced asclock (i.e. a patch to allow asclock to be
