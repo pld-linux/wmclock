@@ -12,11 +12,10 @@ Icon:           wmclock.gif
 URL:            http://afterstep.edoc.com/
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix 	/usr/X11R6
 %define 	_mandir 	%{_prefix}/man
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 This is a Window Maker enhanced asclock (i.e. a patch to allow asclock to be
