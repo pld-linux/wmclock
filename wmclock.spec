@@ -11,7 +11,6 @@ Source1:	wmclock.desktop
 Icon:           wmclock.gif
 URL:            http://afterstep.edoc.com/
 BuildRequires:	XFree86-devel
-BuildRequires:	xpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix 	/usr/X11R6
