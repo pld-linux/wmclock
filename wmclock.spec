@@ -7,11 +7,12 @@ Version:	1.0.12.2
 Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
-Source0:	http://www.ntrnet.net/~jmknoble/WindowMaker/wmclock/%{name}-%{version}.tar.gz
+Source0:	http://www.jmknoble.net/WindowMaker/wmclock/%{name}-%{version}.tar.gz
+# Source0-md5:	97f6e82f55f216ba724859d4652586b4
 Source1:	%{name}.desktop
 Patch0:		%{name}-pl_xpm.patch
 Icon:		wmclock.gif
-URL:		http://www.pobox.com/~jmknoble/WindowMaker/wmclock/
+URL:		http://www.jmknoble.net/WindowMaker/wmclock/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
