@@ -10,8 +10,8 @@ Source0: 	http://www.windowmaker.org/ftp/pub/contrib/srcs/apps/asclock.tgz
 Source1:	wmclock.desktop
 Icon:           wmclock.gif
 URL:            http://afterstep.edoc.com/
-BuildPrereq:	XFree86-devel
-BuildPrereq:	xpm-devel
+BuildRequires:	XFree86-devel
+BuildRequires:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define _prefix /usr/X11R6
