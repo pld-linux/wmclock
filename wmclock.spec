@@ -33,10 +33,12 @@ wmclock to asclock z dodan± mo¿liwo¶ci± u¿ywania go w WindowMakerze.
 
 %build
 #rm -f asclock.o asclock clk.xpm weekday.xpm month.xpm
-./configure --lang english
 #ln -sf xpm/color.xpm clk.xpm
 #ln -sf lang.english/month.xpm month.xpm 
 #ln -sf lang.english/weekday.xpm weekday.xpm
+
+%configure \
+	--lang english
 
 xmkmf -a
 %{__make} CCOPTIONS="%{rpmcflags}"
