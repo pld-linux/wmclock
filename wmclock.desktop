@@ -3,5 +3,5 @@ Name=WmClock
 Comment=ASClock for WindowMaker
 Comment[pl]=ASClock dla WindowMakera
 Exec=wmclock -shape
-Terminal=0
+Terminal=false
 Type=Application
