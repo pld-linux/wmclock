@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=wmclock
+Comment=ASClock for WindowMaker
+Comment[pl]=ASClock dla WindowMakera
+Exec=wmclock -w -s
+Terminal=0
+Type=Application
