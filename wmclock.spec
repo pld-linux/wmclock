@@ -115,7 +115,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(id) %{_pixmapsdir}/id
 %lang(it) %{_pixmapsdir}/it
 %lang(nl) %{_pixmapsdir}/nl
-%lang(no) %{_pixmapsdir}/no
+%lang(nb) %{_pixmapsdir}/no
 %lang(pl) %{_pixmapsdir}/pl
 %lang(pt) %{_pixmapsdir}/pt
 %lang(ru) %{_pixmapsdir}/ru
