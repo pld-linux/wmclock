@@ -58,9 +58,3 @@ gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/wmclock.1x \
 %{_mandir}/man1/wmclock.1x.gz
 
 /etc/X11/applnk/DockApplets/wmclock.desktop
-
-%changelog
-* Sun Jul 11 1999 Piotr Czerwiñski <pius@pld.org.pl> 
-  [1.0-2]
-- spec rewritten for PLD use,
-- based on spec file by Thomas Ribbrock <emgaron@gmx.net>.
