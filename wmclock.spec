@@ -7,8 +7,6 @@ Version:	1.0.12.2
 Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
-Group(de):	X11/Fenstermanager/Werkzeuge
-Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.ntrnet.net/~jmknoble/WindowMaker/wmclock/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-pl_xpm.patch
