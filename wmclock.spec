@@ -4,7 +4,7 @@ Summary(pt_BR):	Relógio para o "dock" do Window Maker
 Summary(es):	Reloj para el "dock" de Winow Maker
 Name:		wmclock
 Version:	1.0.12.2
-Release:	5
+Release:	6
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.jmknoble.net/WindowMaker/wmclock/%{name}-%{version}.tar.gz
@@ -67,14 +67,14 @@ xmkmf -a
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/DockApplets \
+install -d $RPM_BUILD_ROOT%{_desktopdir}/docklets \
 	$RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name},%{_mandir}/man1} \
 	$RPM_BUILD_ROOT%{_pixmapsdir}/{br,cs,da,de,es,fr,hu,id,it,nl,no,pl,pt,ru,sl,sv,uk}
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 install %{name}.man $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1x
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/docklets
 
 install lang.breton/*		$RPM_BUILD_ROOT%{_pixmapsdir}/br
 install lang.czech/*		$RPM_BUILD_ROOT%{_pixmapsdir}/cs
@@ -104,7 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/wmclock
 %{_mandir}/man1/wmclock.1x*
 
-%{_applnkdir}/DockApplets/wmclock.desktop
+%{_desktopdir}/docklets/wmclock.desktop
 %lang(br) %{_pixmapsdir}/br
 %lang(cs) %{_pixmapsdir}/cs
 %lang(da) %{_pixmapsdir}/da
