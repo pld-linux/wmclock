@@ -2,6 +2,6 @@
 Name=wmclock
 Comment=ASClock for WindowMaker
 Comment[pl]=ASClock dla WindowMakera
-Exec=wmclock -w -s
+Exec=wmclock -shape
 Terminal=0
 Type=Application
