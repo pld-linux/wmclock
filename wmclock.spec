@@ -1,5 +1,7 @@
 Summary:	The AfterStep Clock for Window Maker
 Summary(pl):	Zegarek przeniesiony z AfterStep do WindowMakera
+Summary(pt_BR):	Relógio para o "dock" do Window Maker
+Summary(es):	Reloj para el "dock" de Winow Maker
 Name:		wmclock
 Version:	1.0.12.2
 Release:	2
@@ -19,13 +21,35 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define 	_mandir 	%{_prefix}/man
 
 %description
-This is a Window Maker enhanced asclock (i.e. a patch to allow asclock
-to be docked on Window Maker has been included). In this package,
-asclock was renamed to wmclock to avoid clashes with an AfterStep
-installation on the system.
+Wmclock is an applet which displays the date and time in a dockable
+tile in the same style as the clock from the NEXTSTEP(tm) operating
+system.  Wmclock is specially designed for the Window Maker window
+manager, by Alfredo Kojima, and features multiple language support,
+twenty-four-hour and twelve-hour (am/pm) time display, and, optionally,
+can run a user-specified program on a mouse click.  Wmclock is derived
+from asclock, a similar clock for the AfterStep window manager.
 
 %description -l pl
-wmclock to asclock z dodan± mo¿liwo¶ci± u¿ywania go w WindowMakerze.
+Wmclock jest apletem, który wy¶wietla czas i datê w dock'u w ten sam
+sposób jak zegar z NEXTSTEP(tm). Wmclock jest specjalnie zaprojektowany 
+dla Window Maker'a przez Alfredo Kojima; wspiera wiele jêzyków, 24- 
+i 12-godzinne (am/pm) wy¶wietlanie czasu oraz opcjonalnie mo¿e pozwalaæ
+na uruchamianie okre¶lonego przez u¿ytkownika programu po klikniêciu 
+myszk±. Wmclock zosta³ przejêty z asclock'a - podobnego zegara z 
+AfterStep'a poprzez odpowiednie patche.
+
+%description -l pt_BR
+O wmclock é um aplicativo que mostra a data e a hora no "dock" do
+Window Maker no mesmo estilo do relógio no sistema operacional
+NEXTSTEP(r). Foi projetado especialmente para o gerenciador de
+janelas Window Maker, do Alfredo Kojima, e tem várias características:
+suporte a várias línguas, mostra a hora em formato 24 horas e 12 horas
+(am/pm) e, opcionalmente, pode executar um programa especificado pelo
+usuário quando for clicado. É derivado do asclock, um relógio similar
+para o gerente de janelas AfterStep.
+
+%description -l es
+Reloj para el "dock" de Winow Maker
 
 %prep
 %setup -q
