@@ -42,11 +42,11 @@ make CFLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include" \
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
-	$RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
+	$RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
 
 install -s asclock $RPM_BUILD_ROOT%{_bindir}/wmclock
 install asclock.man $RPM_BUILD_ROOT%{_mandir}/man1/wmclock.1x
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/wmclock.1x \
 	README
@@ -60,4 +60,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/wmclock
 %{_mandir}/man1/wmclock.1x.gz
 
-/etc/X11/applnk/DockApplets/wmclock.desktop
+/usr/X11R6/share/applnk/DockApplets/wmclock.desktop
