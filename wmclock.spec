@@ -4,7 +4,7 @@ Summary(pt_BR):	Relógio para o "dock" do Window Maker
 Summary(es):	Reloj para el "dock" de Winow Maker
 Name:		wmclock
 Version:	1.0.12.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
@@ -75,7 +75,7 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/DockApplets \
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 %{__make} install.man DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+#install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 install lang.breton/*		$RPM_BUILD_ROOT%{_pixmapsdir}/br
 install lang.czech/*		$RPM_BUILD_ROOT%{_pixmapsdir}/cz
@@ -107,7 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/wmclock
 %{_mandir}/man1/wmclock.1x*
 
-%{_applnkdir}/DockApplets/wmclock.desktop
+#%{_applnkdir}/DockApplets/wmclock.desktop
 %lang(br) %{_pixmapsdir}/br
 %lang(cz) %{_pixmapsdir}/cz
 %lang(da) %{_pixmapsdir}/da
