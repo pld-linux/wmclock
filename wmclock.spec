@@ -49,7 +49,7 @@ Reloj para el "dock" de Winow Maker
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
 
 %build
 #rm -f asclock.o asclock clk.xpm weekday.xpm month.xpm
