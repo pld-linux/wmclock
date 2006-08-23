@@ -4,7 +4,7 @@ Summary(pt_BR):	Relógio para o "dock" do Window Maker
 Summary(es):	Reloj para el "dock" de Winow Maker
 Name:		wmclock
 Version:	1.0.12.2
-Release:	7
+Release:	8
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.jmknoble.net/WindowMaker/wmclock/%{name}-%{version}.tar.gz
@@ -12,7 +12,11 @@ Source0:	http://www.jmknoble.net/WindowMaker/wmclock/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-pl_xpm.patch
 URL:		http://www.jmknoble.net/WindowMaker/wmclock/
-BuildRequires:	XFree86-devel
+BuildRequires:	xorg-cf-files
+BuildRequires:	xorg-lib-libXpm-devel
+BuildRequires:	xorg-proto-xextproto-devel
+BuildRequires:	xorg-util-gccmakedep
+BuildRequires:	xorg-util-imake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
