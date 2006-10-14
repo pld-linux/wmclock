@@ -56,16 +56,13 @@ Reloj para el "dock" de Winow Maker
 %patch0 -p1
 
 %build
-#rm -f asclock.o asclock clk.xpm weekday.xpm month.xpm
-#ln -sf xpm/color.xpm clk.xpm
-#ln -sf lang.english/month.xpm month.xpm
-#ln -sf lang.english/weekday.xpm weekday.xpm
-
 %configure \
 	--lang english
 
 xmkmf -a
-%{__make} CCOPTIONS="%{rpmcflags}"
+%{__make} \
+	CC="%{__cc}" \
+	CCOPTIONS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
