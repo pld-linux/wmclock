@@ -4,7 +4,7 @@ Summary(pt_BR.UTF-8):	Relógio para o "dock" do Window Maker
 Summary(es.UTF-8):	Reloj para el "dock" de Winow Maker
 Name:		wmclock
 Version:	1.0.12.2
-Release:	8
+Release:	9
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.jmknoble.net/WindowMaker/wmclock/%{name}-%{version}.tar.gz
