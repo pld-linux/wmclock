@@ -1,7 +1,7 @@
 Summary:	The AfterStep Clock for Window Maker
+Summary(es.UTF-8):	Reloj para el "dock" de Winow Maker
 Summary(pl.UTF-8):	Zegarek przeniesiony z AfterStep do WindowMakera
 Summary(pt_BR.UTF-8):	Relógio para o "dock" do Window Maker
-Summary(es.UTF-8):	Reloj para el "dock" de Winow Maker
 Name:		wmclock
 Version:	1.0.12.2
 Release:	9
@@ -13,6 +13,7 @@ Source1:	%{name}.desktop
 Patch0:		%{name}-pl_xpm.patch
 URL:		http://www.jmknoble.net/WindowMaker/wmclock/
 BuildRequires:	xorg-cf-files
+BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXpm-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-gccmakedep
