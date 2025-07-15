@@ -54,7 +54,7 @@ Reloj para el "dock" de Winow Maker
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %configure \
