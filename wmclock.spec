@@ -4,7 +4,7 @@ Summary(pl.UTF-8):	Zegarek przeniesiony z AfterStep do WindowMakera
 Summary(pt_BR.UTF-8):	Relógio para o "dock" do Window Maker
 Name:		wmclock
 Version:	1.0.12.2
-Release:	9
+Release:	10
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.jmknoble.net/WindowMaker/wmclock/%{name}-%{version}.tar.gz
